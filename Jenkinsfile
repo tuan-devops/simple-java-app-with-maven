@@ -15,7 +15,10 @@ pipeline {
     stage ('Build') {
       steps {
         echo 'Running build automation'
-        sh 'cd app && mvn package'
+        sh '''
+          cd app
+          mvn package
+        '''
         archiveArtifacts artifacts: 'app/target/*.jar', allowEmptyArchive: true
       }
     }
