@@ -1,10 +1,14 @@
 pipeline {
   agent {
-    label 'Node-1'
+    label 'Node-1' // Run the pipeline on the Jenkins agent labeled 'Node-1'
+  }
+
+  tools {
+    maven 'M3'
   }
 
   triggers {
-    githubPush()
+    githubPush() // Trigger the pipeline on push events
   }
 
   stages {
