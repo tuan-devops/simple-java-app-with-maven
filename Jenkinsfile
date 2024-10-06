@@ -7,7 +7,7 @@ pipeline {
   }
 
   tools {
-    maven 'M3'
+    maven 'M3' // Version 3.9.9
   }
 
   triggers {
