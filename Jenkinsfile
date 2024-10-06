@@ -16,6 +16,9 @@ pipeline {
 
   stages {
     stage ('Build') {
+      when {
+        branch 'main'
+      }
       steps {
         echo 'Running build automation'
         sh '''
